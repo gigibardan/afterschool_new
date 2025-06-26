@@ -343,12 +343,7 @@ body {
     display: flex; /* Doar când are clasa 'show' */
 }
 
-.loading-overlay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+
 
 .spinner {
     width: 50px;
