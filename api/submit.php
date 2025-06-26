@@ -2,6 +2,11 @@
 // Definire constantă pentru acces securizat
 define('SECURE_ACCESS', true);
 
+
+// DEBUG TEMPORAR
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 // Include fișierele necesare
 require_once '../includes/config.php';
 require_once '../includes/database.php';
@@ -12,6 +17,9 @@ header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Content-Type');
+
+// DEBUG - verifică ce POST primește
+error_log("POST data: " . print_r($_POST, true));
 
 // Verifică că este request POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {

@@ -77,10 +77,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // GDPR consent
         const gdprCheckbox = document.getElementById('acord_gdpr');
-        if (!gdprCheckbox.checked) {
-            alert('Este obligatoriu să acceptați prelucrarea datelor personale conform GDPR.');
-            isValid = false;
-        }
+if (!gdprCheckbox.checked) {
+    alert('Este obligatoriu să acceptați prelucrarea datelor personale conform GDPR.');
+    // ADAUGĂ această linie:
+    gdprCheckbox.focus();
+    isValid = false;
+}
 
         return isValid;
     }
