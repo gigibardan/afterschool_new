@@ -2,11 +2,6 @@
 // Definire constantă pentru acces securizat
 define('SECURE_ACCESS', true);
 
-
-// DEBUG TEMPORAR
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
 // Include fișierele necesare
 require_once '../includes/config.php';
 require_once '../includes/database.php';
@@ -18,12 +13,11 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Content-Type');
 
-// DEBUG - verifică ce POST primește
-error_log("POST data: " . print_r($_POST, true));
-
 // Verifică că este request POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    jsonResponse(['success' => false, 'message' => 'Metoda nu este permisă'], 405);
+    http_response_code(405);
+    echo json_encode(['success' => false, 'message' => 'Metoda nu este permisă']);
+    exit;
 }
 
 try {
@@ -56,44 +50,36 @@ try {
     $errors = validatePreregistrationData($data);
     
     if (!empty($errors)) {
-        jsonResponse([
+        http_response_code(400);
+        echo json_encode([
             'success' => false, 
             'message' => 'Date invalide: ' . implode(', ', $errors)
-        ], 400);
-    }
-    
-    // Verifică dacă email-ul există deja (opțional - warning doar)
-    if (emailExists($data['email_parinte'])) {
-        debug_log("Email duplicat detectat", ['email' => $data['email_parinte']]);
-        // Pentru moment nu blocăm, doar logăm
+        ]);
+        exit;
     }
     
     // Inserează în baza de date
     $insertId = insertPreregistration($data);
     
     if ($insertId) {
-        debug_log("Preînregistrare inserată cu succes", ['id' => $insertId, 'email' => $data['email_parinte']]);
-        
-        jsonResponse([
+        echo json_encode([
             'success' => true,
             'message' => 'Preînregistrarea a fost trimisă cu succes!',
             'id' => $insertId
         ]);
     } else {
-        debug_log("Eroare la inserarea preînregistrării", $data);
-        
-        jsonResponse([
+        http_response_code(500);
+        echo json_encode([
             'success' => false,
             'message' => 'A apărut o eroare la salvarea datelor. Vă rugăm să încercați din nou.'
-        ], 500);
+        ]);
     }
     
 } catch (Exception $e) {
-    debug_log("Excepție în submit.php: " . $e->getMessage());
-    
-    jsonResponse([
+    http_response_code(500);
+    echo json_encode([
         'success' => false,
         'message' => 'A apărut o eroare neașteptată. Vă rugăm să încercați din nou.'
-    ], 500);
+    ]);
 }
 ?>

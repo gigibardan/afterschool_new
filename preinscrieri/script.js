@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             formData.set('acord_marketing', document.getElementById('acord_marketing').checked ? '1' : '0');
             formData.set('acord_foto', document.getElementById('acord_foto').checked ? '1' : '0');
             
-            const response = await fetch('../api/debug_submit.php', {
+            const response = await fetch('../api/submit.php', {
                 method: 'POST',
                 body: formData
             });
