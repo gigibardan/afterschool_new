@@ -1,0 +1,25 @@
+# Config files
+includes/config.php
+config.php
+
+# Logs
+logs/
+*.log
+
+# Cache și temp
+cache/
+temp/
+tmp/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Upload files
+uploads/
