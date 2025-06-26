@@ -3,54 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechMinds Academy - Afterschool</title>
+    <title>TechMinds Academy - Afterschool Program | Educație Tehnologică pentru Copii</title>
+    <meta name="description" content="Program afterschool inovativ de tehnologie pentru copii 6-18 ani. Programare, robotică și creativitate digitală într-un mediu sigur și stimulant.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="icon" href="https://techminds-academy.ro/assets/images/logo-techminds-sigla.png">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="https://techminds-academy.ro/assets/images/logo-techminds-sigla.png" alt="TechMinds Academy" class="nav-logo">
+                <div class="brand-text">
+                    <h1>TechMinds Academy</h1>
+                    <span>Afterschool Program</span>
+                </div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#despre" class="nav-link">Despre Program</a>
+                <a href="preinscrieri/" class="nav-link cta-nav">Preînregistrare</a>
+                <a href="https://techminds-academy.ro" class="nav-link external">Școala Principală</a>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
     <div class="container">
+        <!-- Hero Section -->
         <div class="hero-section">
-            <div class="logo-area">
-                <i class="fas fa-code"></i>
-                <h1>TechMinds Academy</h1>
-                <h2>Afterschool Program</h2>
+            <div class="hero-background">
+                <div class="tech-particles"></div>
+                <div class="floating-elements">
+                    <div class="float-item">💻</div>
+                    <div class="float-item">🤖</div>
+                    <div class="float-item">⚡</div>
+                    <div class="float-item">🎮</div>
+                    <div class="float-item">🚀</div>
+                </div>
             </div>
             
             <div class="status-card">
-                <div class="status-icon">
-                    <i class="fas fa-tools"></i>
+                <div class="coming-soon-badge">
+                    <i class="fas fa-rocket"></i>
+                    <span>În Dezvoltare</span>
                 </div>
-                <h3>Site în construcție</h3>
-                <p>Pregătim ceva minunat pentru copiii voștri!</p>
+                
+                <div class="hero-content">
+                    <h1 class="main-title">
+                        <span class="brand-highlight">TechMinds Academy</span>
+                        <span class="program-title">Afterschool Program</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        Pregătim ceva extraordinar pentru copiii voștri! Un program afterschool inovativ 
+                        care combină <strong>tehnologia</strong>, <strong>creativitatea</strong> și <strong>distractia</strong> 
+                        într-un mediu educațional sigur și stimulant.
+                    </p>
+                    
+                    <div class="program-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-users"></i>
+                            <span>6-14 ani</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Luni - Vineri</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>București</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Mediu Sigur</span>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="cta-section">
-                    <p class="cta-text">Înscrierile pentru noul an școlar sunt deschise:</p>
+                    <h3>Fii primul care află când lansăm!</h3>
+                    <p class="cta-description">
+                        Înscrierea pentru anul școlar 2025-2026 se deschide în curând. 
+                        Rezervă-ți locul printr-o preînregistrare gratuită!
+                    </p>
+                    
                     <a href="preinscrieri/" class="cta-button">
                         <i class="fas fa-user-plus"></i>
-                        Preînregistrează-te ACUM
+                        <span>Preînregistrează-te GRATUIT</span>
+                        <div class="button-shine"></div>
                     </a>
-                </div>
-            </div>
-            
-            <div class="info-cards">
-                <div class="info-card">
-                    <i class="fas fa-laptop-code"></i>
-                    <h4>Programare</h4>
-                    <p>Scratch, Python, Web Development</p>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-robot"></i>
-                    <h4>Robotică</h4>
-                    <p>LEGO Mindstorms, Arduino</p>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-gamepad"></i>
-                    <h4>Game Design</h4>
-                    <p>Unity, Construct 3</p>
+                    
+                    <div class="cta-benefits">
+                        
+                        <div class="benefit-item">
+                            <i class="fas fa-star"></i>
+                            <span>Prioritate la înscriere</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- About Section -->
+        <section id="despre" class="about-section">
+            <div class="section-header">
+                <h2>Ce pregătim pentru copiii voștri?</h2>
+                <p>Un afterschool care va redefini modul în care copiii învață și se distrează</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Dezvoltare Cognitivă</h3>
+                    <p>Activități care stimulează gândirea logică, creativitatea și rezolvarea problemelor prin tehnologie.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Tehnologie Aplicată</h3>
+                    <p>Introducere practică în lumea digitală: programare de bază, robotică și proiecte interactive.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3>Lucru în Echipă</h3>
+                    <p>Proiecte colaborative care dezvoltă abilitățile sociale și de comunicare ale copiilor.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Sprijin Educațional</h3>
+                    <p>Ajutor la teme și consolidarea cunoștințelor dobândite la școală într-un mod interactiv.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Info -->
+        <section class="contact-section">
+            <div class="contact-card">
+                <h3>Ai întrebări? Suntem aici să te ajutăm!</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+40 758 707 448</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>office@techminds-academy.ro</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Strada Știrbei Vodă, Nr. 26-28, Etaj 3, Union Business Center, Sector 1, București</span>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61572403241620" target="_blank" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/official.techminds.academy" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/official-techminds-academy/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="https://techminds-academy.ro/assets/images/logo-techminds-sigla.png" alt="TechMinds Academy" class="footer-logo">
+                <p>© 2025 TechMinds Academy. Toate drepturile rezervate.</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="https://techminds-academy.ro/politicadeconfidentialitate.html" target="_blank">Politică de Confidențialitate</a>
+                <a href="https://techminds-academy.ro/termenisiconditii.html" target="_blank">Termeni și Condiții</a>
+                <a href="https://techminds-academy.ro" target="_blank">TechMinds Academy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

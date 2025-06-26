@@ -355,6 +355,105 @@ body {
     margin-bottom: 1rem;
 }
 
+/* FORM FOOTER */
+.form-footer {
+    background: var(--color-light);
+    border-top: 1px solid var(--color-gray-light);
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-contact {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.footer-logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.footer-logo-section h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+.footer-info {
+   display: flex;
+   flex-direction: column;
+   gap: 0.75rem;
+   margin-bottom: 1.5rem;
+}
+
+.contact-row {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 0.75rem;
+   color: var(--color-gray);
+   font-size: 0.95rem;
+}
+
+.contact-row i {
+   color: #667eea;
+   width: 16px;
+   text-align: center;
+}
+
+.footer-legal {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem;
+   flex-wrap: wrap;
+   font-size: 0.9rem;
+}
+
+.footer-legal a {
+   color: #667eea;
+   text-decoration: none;
+   transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+   color: var(--color-dark);
+}
+
+.footer-legal span {
+   color: var(--color-gray);
+}
+
+/* Responsive pentru form footer */
+@media (max-width: 768px) {
+   .footer-logo-section {
+       flex-direction: column;
+       gap: 0.5rem;
+   }
+   
+   .contact-row {
+       flex-direction: column;
+       gap: 0.5rem;
+       text-align: center;
+   }
+   
+   .footer-legal {
+       flex-direction: column;
+       gap: 0.5rem;
+   }
+}
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
