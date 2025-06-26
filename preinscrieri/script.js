@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showLoading() {
         loadingOverlay.style.display = 'flex';
-        submitBtn.disabled = true;
+        submitBtn.disabled = false;
     }
 
     function hideLoading() {

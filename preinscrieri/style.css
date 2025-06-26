@@ -323,8 +323,9 @@ body {
 }
 
 /* Loading Overlay */
+/* LOADING OVERLAY - FIX */
 .loading-overlay {
-    display: none;
+    display: none; /* MEREU none la început */
     position: fixed;
     top: 0;
     left: 0;
@@ -333,6 +334,13 @@ body {
     background: rgba(255, 255, 255, 0.9);
     z-index: 2000;
     backdrop-filter: blur(5px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-overlay.show {
+    display: flex; /* Doar când are clasa 'show' */
 }
 
 .loading-overlay {
